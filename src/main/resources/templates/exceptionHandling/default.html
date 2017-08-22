@@ -17,9 +17,6 @@
       {{#stringResult}}
          {{ stringResult }}
       {{/stringResult}}
-      {{#stringFailure}}
-      	{{ . }}
-      {{/stringFailure}}
     </form>
     <form action="/handleInteger"
           method="post">
@@ -30,9 +27,6 @@
       {{#integerResult}}
          {{ integerResult }}
       {{/integerResult}}
-      {{#integerFailure}}
-         {{ . }}
-      {{/integerFailure}}
     </form>
     <form action="/handleDecimal"
           method="post">
@@ -43,9 +37,6 @@
       {{#decimalResult}}
          {{ decimalResult }}
       {{/decimalResult}}
-      {{#decimalFailure}}
-         {{ . }}
-      {{/decimalFailure}}
     </form>
     <form action="/handleDate"
           method="post">
@@ -55,11 +46,7 @@
       <button>Submit</button>
       {{#dateResult}}
          {{ dateResult }}
-      {{/dateResult}}
-     {{#dateFailure}}
-       	{{ . }}
-      {{/dateFailure}}
-      
+      {{/dateResult}}   
     </form>
     <form action="/handleUrl"
           method="post">

@@ -27,7 +27,7 @@ public class ExceptionHandlingController {
 		try {
 			mv.addObject("stringResult", probablySomeText.substring(4));
 		} catch (IndexOutOfBoundsException ioobe) {
-			mv.addObject("stringFailure", "string should be four characters");
+			mv.addObject("stringResult", "string should be four characters");
 		}
 		return mv;
 	}
@@ -49,7 +49,7 @@ public class ExceptionHandlingController {
 		try {
 			mv.addObject("integerResult", Integer.parseInt(probablyAnInteger));
 		} catch (NumberFormatException nfe) {
-			mv.addObject("integerFailure", "not an integer");
+			mv.addObject("integerResult", "not an integer");
 		}
 		return mv;
 	}
@@ -60,7 +60,7 @@ public class ExceptionHandlingController {
 		try {
 			mv.addObject("decimalResult", Double.parseDouble(probablyADecimal));
 		} catch (NumberFormatException nfe) {
-			mv.addObject("decimalFailure", "not a decimal");
+			mv.addObject("decimalResult", "not a decimal");
 		}
 		return mv;
 	}
@@ -71,7 +71,7 @@ public class ExceptionHandlingController {
 		try {
 			mv.addObject("dateResult", LocalDate.parse(probablyADate));
 		} catch (DateTimeParseException dtpe) {
-			mv.addObject("dateFailure", "not a date");
+			mv.addObject("dateResult", "not a date");
 		}
 		return mv;
 	}
